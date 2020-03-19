@@ -16,10 +16,10 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>9660</WindowHeight>
-  <WindowWidth>16100</WindowWidth>
-  <WindowTopX>240</WindowTopX>
-  <WindowTopY>20</WindowTopY>
+  <WindowHeight>6470</WindowHeight>
+  <WindowWidth>19200</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
   <ProtectWindows>False</ProtectWindows>
  </ExcelWorkbook>
@@ -34,9 +34,9 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="survey">
-  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="14" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="15" x:FullColumns="1"
    x:FullRows="1" ss:DefaultRowHeight="14.5">
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">type</Data></Cell>
     <Cell><Data ss:Type="String">name</Data></Cell>
     <Cell><Data ss:Type="String">label</Data></Cell>
@@ -44,70 +44,73 @@
     <Cell><Data ss:Type="String">required</Data></Cell>
     <Cell><Data ss:Type="String">calculation</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">start</Data></Cell>
     <Cell><Data ss:Type="String">start</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">end</Data></Cell>
     <Cell><Data ss:Type="String">end</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">note</Data></Cell>
     <Cell><Data ss:Type="String">This_form_is_for_col_mp_bags_in_the_field</Data></Cell>
     <Cell><Data ss:Type="String">This form is for collecting decomp bags in the field</Data></Cell>
     <Cell><Data ss:Type="String">You will retrieve 4 bags from every site - Subplot 1: row A and B and Subplot 2: row A and B</Data></Cell>
     <Cell><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">datetime</Data></Cell>
     <Cell><Data ss:Type="String">Enter_a_date_and_time</Data></Cell>
     <Cell><Data ss:Type="String">Enter a date and time</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">true</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">barcode</Data></Cell>
     <Cell><Data ss:Type="String">barcode_bag</Data></Cell>
     <Cell><Data ss:Type="String">Scan a barcode</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">barcode</Data></Cell>
-    <Cell><Data ss:Type="String">Scan_a_barcode</Data></Cell>
+    <Cell><Data ss:Type="String">scan_a_barcode</Data></Cell>
     <Cell><Data ss:Type="String">Scan a barcode</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">barcode</Data></Cell>
     <Cell><Data ss:Type="String">barcode_bag_001</Data></Cell>
     <Cell><Data ss:Type="String">Scan a barcode</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">barcode</Data></Cell>
-    <Cell><Data ss:Type="String">Scan_a_barcode_001</Data></Cell>
+    <Cell><Data ss:Type="String">scan_a_barcode_001</Data></Cell>
     <Cell><Data ss:Type="String">Scan a barcode</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">note</Data></Cell>
     <Cell><Data ss:Type="String">out_Shake_the_dirt_and_debris</Data></Cell>
     <Cell><Data ss:Type="String">Shake the dirt off and out of your bags - pull out weeds that have grown inside</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">acknowledge</Data></Cell>
     <Cell><Data ss:Type="String">Return_bags_to_lab_t_g_on_moisture_levels</Data></Cell>
     <Cell><Data ss:Type="String">Return bags to lab to dry at 60C for about 2 days, depending on moisture levels</Data></Cell>
     <Cell ss:Index="5"><Data ss:Type="String">false</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">calculate</Data></Cell>
     <Cell><Data ss:Type="String">__version__</Data></Cell>
     <Cell ss:Index="6"><Data ss:Type="String">'vGkgNKV8krri7GAYA2HD5k'</Data></Cell>
    </Row>
-   <Row ss:Index="14">
+   <Row ss:Index="14" ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">test out a commit</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Test out diffs</Data></Cell>
    </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
@@ -116,11 +119,13 @@
     <Footer x:Margin="0.3"/>
     <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
    </PageSetup>
+   <Unsynced/>
    <Selected/>
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveRow>13</ActiveRow>
+     <ActiveRow>8</ActiveRow>
+     <ActiveCol>1</ActiveCol>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
@@ -130,10 +135,10 @@
  <Worksheet ss:Name="settings">
   <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="2" x:FullColumns="1"
    x:FullRows="1" ss:DefaultRowHeight="14.5">
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">version</Data></Cell>
    </Row>
-   <Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">vGkgNKV8krri7GAYA2HD5k</Data></Cell>
    </Row>
   </Table>
@@ -143,6 +148,7 @@
     <Footer x:Margin="0.3"/>
     <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
    </PageSetup>
+   <Unsynced/>
    <ProtectObjects>False</ProtectObjects>
    <ProtectScenarios>False</ProtectScenarios>
   </WorksheetOptions>
