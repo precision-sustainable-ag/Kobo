@@ -1,0 +1,12 @@
+type,name,label,hint,required,calculation
+start,start,,,,
+end,end,,,,
+note,This_form_is_for_col_mp_bags_in_the_field,This form is for collecting decomp bags in the field,You will retrieve 4 bags from every site - Subplot 1: row A and B and Subplot 2: row A and B,false,
+datetime,Enter_a_date_and_time,Enter a date and time,,true,
+barcode,barcode_bag,Scan a barcode,,false,
+barcode,Scan_a_barcode,Scan a barcode,,false,
+barcode,barcode_bag_001,Scan a barcode,,false,
+barcode,Scan_a_barcode_001,Scan a barcode,,false,
+note,out_Shake_the_dirt_and_debris,Shake the dirt off and out of your bags - pull out weeds that have grown inside,,false,
+acknowledge,Return_bags_to_lab_t_g_on_moisture_levels,"Return bags to lab to dry at 60C for about 2 days, depending on moisture levels",,false,
+calculate,__version__,,,,'vGkgNKV8krri7GAYA2HD5k'
