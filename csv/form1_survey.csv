@@ -1,0 +1,13 @@
+type,parameters,name,label,constraint,required,calculation
+today,,today,what is today,,,
+select_one state,randomize=true,state_id,what's your state,,,
+integer,,count,how many items,. <= 1000,,
+note,,form_name,my first test form,,,
+barcode,,bar1,scan a barcode,,yes,
+begin group,,user_id,who is the user,,,
+text,,user_name,what’s your name,,,
+geopoint,,location,where are you,,,
+end group,,,,,,
+calculate,,sample_size,,,,${count} * 0.1
+note,,sample_note,"10% of your total items is, ${sample_size}",,,
+note,,second_note,nothing to see here,,,
