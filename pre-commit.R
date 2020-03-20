@@ -21,6 +21,8 @@ write_each_sheet_to_csv <- function(path, sheet) {
     path = file.path(new_path, paste0(form_name, "_", sheet, ".csv")), 
     na = "",
     )
+  
+  invisible()
 }
 
 write_xls_to_csv <- function(path) {
@@ -31,6 +33,8 @@ write_xls_to_csv <- function(path) {
     write_each_sheet_to_csv,
     path = path
     )
+  
+  invisible()
 }
 
 xls_files <- list.files(
