@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
-# Run this line in the terminal first:
-## ln -s ../../pre-commit.sh .git/hooks/pre-commit
+# Run this line in the terminal first before deploying hook:
+## ln -s ../../pre-commit.R .git/hooks/pre-commit
 
 if (!requireNamespace("readxl")) { install.packages("readxl") }
 if (!requireNamespace("readr")) { install.packages("readr") }
