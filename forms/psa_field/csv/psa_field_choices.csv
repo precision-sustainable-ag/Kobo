@@ -1,0 +1,65 @@
+list_name,name,label
+dq65c45,corn,Corn
+dq65c45,soybean,Soybean
+dq65c45,wheat,Wheat
+dq65c45,cotton,Cotton
+dq65c45,tobacco,Tobacco
+dq65c45,fallow,Fallow
+dq65c45,pasture,Pasture/ Hay/ Forage
+dq65c45,peanut,Peanut
+dq65c45,summer_cover_c,Summer Cover Crop
+dq65c45,hort,Horticultural Crop
+dq65c45,other,Other
+sv07f73,none,none
+sv07f73,1_to_29_lbs_n_,1 to 29 lbs N/ acre
+sv07f73,30_to_59_lbs_n,30 to 59 lbs N/ acre
+sv07f73,60_to_89_lbs_n,60 to 89 lbs N/ acre
+sv07f73,90_to_119_lbs_,90 to 119 lbs N/ acre
+sv07f73,120_to_149_lbs,120 to 149 lbs N/ acre
+sv07f73,150_to_179_lbs,150 to 179 lbs N/ acre
+sv07f73,180_or_greater,180 or greater lbs N/ acre
+ji9wb83,drilled,Drilled
+ji9wb83,broadcast,Broadcast
+ji9wb83,aerial_seeded,Aerial Seeded
+ji9wb83,other,Other
+xv1mj93,cereal_rye,Cereal Rye
+xv1mj93,ryegrass,Ryegrass
+xv1mj93,wheat,Wheat
+xv1mj93,oats__black_oats,Oats/ Black Oats
+xv1mj93,triticale,Triticale
+xv1mj93,other_grass_sp,Other grass spp
+xv1mj93,radish,Radish
+xv1mj93,canola__rape,Canola/ Rape
+xv1mj93,other_brassica,Other brassica spp
+xv1mj93,crimson_clover,Crimson Clover
+xv1mj93,red_clover,Red Clover
+xv1mj93,berseem_clover,Berseem Clover
+xv1mj93,other_clover_s,Other Clover spp
+xv1mj93,hairy_vetch,Hairy Vetch
+xv1mj93,woolypod_vetch,Woolypod Vetch
+xv1mj93,common_vetch,Common Vetch
+xv1mj93,other_vetch_sp,Other Vetch spp
+xv1mj93,winter_pea,Winter Pea
+xv1mj93,alfalfa,Alfalfa
+xv1mj93,other,Other
+wp6vk23,yes,Yes
+wp6vk23,no,No
+yi7ok34,yes,Yes
+yi7ok34,no,No
+cl4gf13,herbicide,Herbicide
+cl4gf13,mechanical,Mechanical
+cl4gf13,combination_termination,Combination of Herbicide and Mechanical (ie: roller crimper)
+bd5he26,2_4_d,2 4-D
+bd5he26,atrazine,Atrazine
+bd5he26,clopyralid,Clopyralid
+bd5he26,dicamba,Dicamba
+bd5he26,glufosinate_ammonium_liberty,Glufosinate/ Liberty
+bd5he26,glyphosate_roundup,Glysphosate/ Roundup
+bd5he26,imazapyr,Imazapyr
+bd5he26,imazethapyr,Imazethapyr/ Pursuit
+bd5he26,metolachlor,Metolachlor/ Bicep/ Dual/ etc.
+bd5he26,na_salt_bentazon,Na Salt of bentazon/ Basagran
+bd5he26,gramoxone,Paraquat/Gramoxone
+bd5he26,pendimethalin,Pendimethalin/Prowl
+bd5he26,rimsulfuron,Rimsulfuron/LeadOff
+bd5he26,trifluralin,Trifluralin/Treflan
