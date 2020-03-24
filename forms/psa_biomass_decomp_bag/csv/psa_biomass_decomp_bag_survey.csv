@@ -153,4 +153,4 @@ decimal,dry_wt_023,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
 end_group,,,,,,,,,,,,
 note,end_sub2,"You have finished with Subplot 2. You will bring 4 paper bags back to the lab to dry at 60C. The 20 remaining mesh decomp bags should be placed in the field, if planted with cash crop, or at the field edge until crop rows are in place.",,false,,,,,,,,
 calculate,__version__,,,false,,,,,,'vfEGcCjzvBHnjN42teCqtU',,
-calculate,_version_,,,,,,,,,'vUprznYudSViSWHSbR3PPS',,__version__
+calculate,_version_,,,,,,,,,'vDjYTu3PJg7GPJJHkmCot5',,__version__
