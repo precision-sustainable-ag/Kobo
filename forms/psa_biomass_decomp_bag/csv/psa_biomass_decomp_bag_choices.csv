@@ -1,9 +1,7 @@
 list_name,name,label
 my95g71,yes,Yes
 my95g71,no,No
-yb8fs69,i_don_t_know_t,"No, I don't know the termination date, I will record it later on the website"
-yb8fs69,i_know_the_ter,I know the termination date
 pj8me03,drilled,Drilled
 pj8me03,broadcast,Broadcast
-ev21s69,more_than_40__,More than 40% legume
-ev21s69,less_than_40__,Less than 40% legume
+ev21s69,more_than_40_legume,More than 40% legume
+ev21s69,less_than_40_legume,Less than 40% legume
