@@ -1,0 +1,156 @@
+type,name,label,hint,required,relevant,media::video,default,appearance,media::image,calculation,guidance_hint,$given_name
+start,start,,,,,,,,,,,
+end,end,,,,,,,,,,,
+select_one my95g71,first_time,Welcome to Precision Sustainable Agriculture Data Collection form for Cover Crop Biomass Harvest and Decomposition Bags,Is this your first time collecting biomass on-farm?,false,,,,,,,,
+note,biomass_video,Watch this short video about On-Farm Biomass,,false,${first_time} = 'yes',sample_movie.mov,,,,,,
+text,url_widget,Use this link for more information,text type with: precisionsustainableag.org,false,${first_time} = 'yes',,https://precisionsustainableag.org,url,,,,
+note,field_info,First we need a little information about your field,,false,,,,,,,,
+text,farm_code,What is the Farm Code?,These 3 letter codes were selected for you when you enrolled a farm,true,,,,,,,,
+geopoint,gps_site,Select a single GPS point to represent this farm,(will be the point used for mapping locations and weather data),false,,,,,,,,
+select_one yb8fs69,termination_data_you,Do you know the termination date of this cover crop?,,false,,,,,,,,
+date,termination_date,Termination Date,,false,${termination_data_you} = 'i_know_the_ter',,,,,,,
+note,Field_diagram,"Walk around your field, surveying the cover crop. While you are walking we will take GPS points around the perimeter of the whole Cover Crop and Bare Treatment areas",,false,,,,,sample.jpg,,,
+geopoint,gps_cc_001,Record each of the 4 corners of the Cover Crop Treatment,,false,,,,,,,,
+geopoint,gps_cc_002,Record each of the 4 corners of the Cover Crop Treatment,,false,,,,,,,,
+geopoint,gps_cc_003,Record each of the 4 corners of the Cover Crop Treatment,,false,,,,,,,,
+geopoint,gps_cc_004,Record each of the 4 corners of the Cover Crop Treatment,,false,,,,,,,,
+geopoint,gps_bare_001,Record each of the 4 corners of the Bare Ground Treatment,,false,,,,,,,,
+geopoint,gps_bare_002,Record each of the 4 corners of the Bare Ground Treatment,,false,,,,,,,,
+geopoint,gps_bare_003,Record each of the 4 corners of the Bare Ground Treatment,,false,,,,,,,,
+geopoint,gps_bare_004,Record each of the 4 corners of the Bare Ground Treatment,,false,,,,,,,,
+note,measure,Next we want to help you accurately measure 1 meter square harvest areas for cover crop biomass.,,false,,,,,,,,
+select_one pj8me03,drilled_broad,Was the cover crop planted with a drill or broadcast?,,false,,,,,,,,
+decimal,drill_spacing,"If drilled, what is the drill line spacing in inches?",,false,${drilled_broad} = 'drilled',,,,,,,
+calculate,drill_spacing_cm,,,false,${drilled_broad} = 'drilled',,,,,${drill_spacing} * 2.54,,
+note,That_is_drill_spaci_in_centimeters_right,That is ${drill_spacing_cm} in centimeters right?,,false,${drilled_broad} = 'drilled',,,,,,,
+calculate,harvest_length,,,false,${drilled_broad} = 'drilled',,,,,"round (10000 div 6 div ${drill_spacing_cm}, 2)",This is how long you will harvest 6 drill lines,
+note,To_equal_1_meter_squ_ch_harvest_length,"To equal 1 meter square area in THIS field: You will harvest 6 drill lines, for this many centimeters each:  ${harvest_length}",Select 6 representative drill lines in your subplot.,false,${drilled_broad} = 'drilled',,,,,,,
+note,Next_take_2_extra_l_g_tools_to_Subplot_1,"Next take  2 extra large plastic bags, measuring device, and cutting tools to Subplot 1",,false,${drilled_broad} = 'drilled',,,,,,,
+note,Your_field_is_Broadc_r_a_pre_made_quadrat,"Your field is Broadcast:  You will harvest one meter square area 100 cm x 100 cm, by using meter sticks, or a pre-made quadrat.",,false,${drilled_broad} = 'broadcast',,,,,,,
+note,Next_take_2_extra_la_g_tools_to_Subplot_1,"Next take 2 extra large plastic bags, a meter square measuring device, and cutting tools to Subplot 1",You will harvest 2 sub-samples (we will call them A and B) inside each subplot.,false,${drilled_broad} = 'broadcast',,,,,,,
+select_one ev21s69,sub1_Legume,Look around in your Subplot.  It is roughly 30 m x 30 m area.  Is the cover crop stand made up of more or less than 40% legume?,,false,,,,,,,,
+decimal,fresh_wt_a1,What is the Fresh Wt of Subsample A (fresh biomass/ m2 including the bag) in grams?,,false,,,,,,,,
+decimal,fresh_wt_b1,What is the Fresh Wt of Subsample B (fresh biomass/ m2 including the bag) in grams?,,false,,,,,,,,
+note,Next_pour_the_conten_em_into_the_tote_too,"Next pour the contents of both Subsample A and B into one large container or tote. There are 2 meters inside.  Mix them all together.  Walk back into the field, and clip extra handfuls of cover crop and throw them into the tote too.",,false,,,,,,,,
+decimal,bag_a,What is the weight of empty bag A (in grams)?,,false,,,,,,,,
+decimal,bag_b,What is the weight of empty bag B (in grams)?,,false,,,,,,,,
+calculate,sub1_average_fresh_wt,,,false,,,,,,(${fresh_wt_a1} - ${bag_a} + ${fresh_wt_b1} - ${bag_b}) div 2,,
+note,This_is_the_average_h_wt_grams_correct,"This is the average fresh weight of your Subplot 1, ${sub1_average_fresh_wt} grams, correct?",,false,,,,,,,,
+calculate,target1_bag_wt,,,false,,,,,,"round(${sub1_average_fresh_wt} div 6, 2)",,
+note,target,"Next we divide that weight by 6, to get the target fresh weight for each of the 12 decomp bags in that subplot.  Your target fresh weight (in grams) per each decomp bag in THIS subplot is:: ${target1_bag_wt}",,false,,,,,,,,
+note,Target_weight_target1_bag_wt,Target weight:  ${target1_bag_wt},,false,,,,,,,,
+note,Fill_12_bags_10_mes_s_and_B_s_T0_to_T5,Fill 12 bags (10 mesh and 2 paper) for subplot 1 (A’s and B’s) T0 to T5.,,false,,,,,,,,
+begin_group,dry_wt_group,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,
+barcode,decomp_bag,Use the camera to scan a barcode,,false,,,,,,,,
+decimal,dry_wt,Total Fresh Wt (grams),,false,,,,,,,,
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_001,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_001,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_001,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_002,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_002,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_002,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_003,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_003,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_003,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_004,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_004,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_004,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_005,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_005,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_005,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_006,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_006,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_006,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_007,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_007,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_007,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_008,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_008,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_008,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_009,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_009,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_009,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_010,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_010,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_010,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group_011,Decomp Bag Fresh Subplot1  Rows A and B Target weight:  ${target1_bag_wt},,false,,,,,,,,dry_wt_group
+barcode,decomp_bag_011,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_011,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+note,end_sub1,You have finished with Subplot 1. Continue the same process for Subplot 2.  Place 2 paperbags from Subplot 1 in the truck and we will return to the mesh bags later.,,false,,,,,,,,
+note,sub2,Begin Subplot 2,,false,,,,,,,,
+note,Next_take_2_extra_la_g_tools_to_Subplot_1_001,"Take 2 extra large plastic bags, a meter square measuring device, and cutting tools to Subplot 2",You will harvest 2 sub-samples (we will call them A and B) inside each subplot.,false,,,,,,,,Next_take_2_extra_la_g_tools_to_Subplot_1
+select_one ev21s69,sub2_Legume,Look around in your Subplot.  It is roughly 30 m x 30 m area.  Is the cover crop stand made up of more or less than 40% legume?,,false,,,,,,,,
+decimal,fresh_wt_a2,What is the Fresh Wt of Subsample A (fresh biomass/ m2 including the bag) in grams?,,false,,,,,,,,
+decimal,fresh_wt_b2,What is the Fresh Wt of Subsample B (fresh biomass/ m2 including the bag) in grams?,,false,,,,,,,,
+note,Next_pour_the_conten_em_into_the_tote_too_001,"Next pour the contents of both Subsample A and B into one large container or tote. There are 2 meters inside.  Mix them all together.  Walk back into the field, and clip extra handfuls of cover crop and throw them into the tote too.",,false,,,,,,,,Next_pour_the_conten_em_into_the_tote_too
+decimal,bag_a2,What is the weight of empty bag A (in grams)?,,false,,,,,,,,
+decimal,bag_b2,What is the weight of empty bag B (in grams)?,,false,,,,,,,,
+calculate,sub2_average_fresh_wt,,,false,,,,,,(${fresh_wt_a2} - ${bag_a2} + ${fresh_wt_b2} - ${bag_b2}) div 2,,
+note,This_is_the_average_h_wt_grams_correct_001,"This is the average fresh weight of your Subplot 2, ${sub2_average_fresh_wt} grams, correct?",,false,,,,,,,,This_is_the_average_h_wt_grams_correct
+calculate,target2_bag_wt,,,false,,,,,,"round(${sub2_average_fresh_wt} div 6, 2)",,
+note,target_001,"Next we divide that weight by 6, to get the target fresh weight for each of the 12 decomp bags in that subplot.  Your target fresh weight (in grams) per each decomp bag in THIS subplot is:: ${target2_bag_wt}",,false,,,,,,,,target
+note,Target_weight_target2_bag_wt,Target weight:  ${target2_bag_wt},,false,,,,,,,,
+note,instruct,Fill 12 bags (10 mesh and 2 paper) for Subplot 2 (A’s and B’s) T0 to T5.,,false,,,,,,,,
+begin_group,dry_wt_group2,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,
+barcode,decomp_bag_012,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_012,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_001,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_013,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_013,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_002,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_014,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_014,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_003,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_015,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_015,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_004,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_016,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_016,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_005,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_017,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_017,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_006,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_018,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_018,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_007,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_019,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_019,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_008,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_020,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_020,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_009,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_021,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_021,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_010,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_022,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_022,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+begin_group,dry_wt_group2_011,Decomp Bag Fresh Subplot 2 Rows A and B Target weight:  ${target2_bag_wt},,false,,,,,,,,dry_wt_group2
+barcode,decomp_bag_023,Use the camera to scan a barcode,,false,,,,,,,,decomp_bag
+decimal,dry_wt_023,Total Fresh Wt (grams),,false,,,,,,,,dry_wt
+end_group,,,,,,,,,,,,
+note,end_sub2,"You have finished with Subplot 2. You will bring 4 paper bags back to the lab to dry at 60C. The 20 remaining mesh decomp bags should be placed in the field, if planted with cash crop, or at the field edge until crop rows are in place.",,false,,,,,,,,
+calculate,__version__,,,false,,,,,,'vfEGcCjzvBHnjN42teCqtU',,
+calculate,_version_,,,,,,,,,'vUprznYudSViSWHSbR3PPS',,__version__
