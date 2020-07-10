@@ -1,0 +1,16 @@
+type,name,label,required,default
+start,start,,,
+end,end,,,
+note,form_name,Form Name,,psa_water_sensor_install
+note,form_version,Version,,v2
+note,welcome,"Welcome to the form for installation of soil water sensors, with nodes and gateways.",false,
+note,note,Today you likely will also place decomp bags inside each subplot today. Don't forget to place a decomp bag on top of the surface sensor in your cover crop treatment. This will likely be your Time 5 pick up.  You will be taking GPS points from each subplot today.  ,false,
+barcode,scan_barcode,Scan the barcode on the inside of your Gateway,false,
+text,code,What is your Farm Code?,false,
+select_one xv6ma10,subplot,In which subplot are you installing your sensors?,false,
+barcode,cover_crop_node,Scan your cover crop node,false,
+geopoint,gps_cover_crop_node,What is the GPS location of your cover crop node?,false,
+barcode,bare_node,Scan your bare node,false,
+geopoint,gps_bare_node,What is the GPS location of your bare node?,false,
+date,date_install,What day did you install the sensors?,false,
+text,issues,Any issues to report about your sensors?,false,
