@@ -4,9 +4,12 @@ et6qm00,yes,Yes
 yy77y77,farm,Farm
 yy77y77,research_station,Research Station
 dq65c45,corn,Corn
+dq65c45,silage_corn,Silage Corn
 dq65c45,soybean,Soybean
-dq65c45,wheat,Wheat
+dq65c45,wheat_winter,Wheat (winter)
+dq65c45,wheat_spring,Wheat (spring)
 dq65c45,cotton,Cotton
+dq65c45,grain_sorghum,Grain Sorghum
 dq65c45,tobacco,Tobacco
 dq65c45,oats,Oats
 dq65c45,barley,Barley
@@ -15,6 +18,7 @@ dq65c45,fallow,Fallow
 dq65c45,pasture,Pasture/ Hay/ Forage
 dq65c45,livestock,Livestock
 dq65c45,summer_cover_c,Summer Cover Crop
+dq65c45,winter_cover,Winter Cover Crop
 dq65c45,hort,Horticultural Crop
 dq65c45,other,Other
 xe2wp37,0,No
@@ -26,6 +30,7 @@ xv1mj93,ryegrass,Ryegrass
 xv1mj93,wheat,Wheat
 xv1mj93,oats__black_oats,Oats/ Black Oats
 xv1mj93,triticale,Triticale
+xv1mj93,barley,Barley
 xv1mj93,other_grass_sp,Other grass spp
 xv1mj93,radish,Radish
 xv1mj93,canola__rape,Canola/ Rape
@@ -62,6 +67,7 @@ sv07f73,90_to_119_lbs_n,90 to 119 lbs N/ acre
 sv07f73,120_to_149_lbs_n,120 to 149 lbs N/ acre
 sv07f73,150_to_179_lbs_n,150 to 179 lbs N/ acre
 sv07f73,180_or_greater_lba_n,180 or greater lbs N/ acre
+sv07f73,nfert_rate_plus_manure,the above rate plus manure
 ji9wb83,drilled,Drilled
 ji9wb83,broadcast,Broadcast
 ji9wb83,aerial_seeded,Aerial Seeded
