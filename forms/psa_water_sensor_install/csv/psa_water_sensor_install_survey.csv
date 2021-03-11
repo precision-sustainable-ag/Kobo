@@ -1,16 +1,40 @@
-type,name,label,required,default
-start,start,,,
-end,end,,,
-note,form_name,Form Name,,psa_water_sensor_install
-note,form_version,Version,,v2
-note,welcome,"Welcome to the form for installation of soil water sensors, with nodes and gateways.",false,
-note,note,Today you likely will also place decomp bags inside each subplot today. Don't forget to place a decomp bag on top of the surface sensor in your cover crop treatment. This will likely be your Time 5 pick up.  You will be taking GPS points from each subplot today.  ,false,
-barcode,scan_barcode,Scan the barcode on the inside of your Gateway,false,
-text,code,What is your Farm Code?,false,
-select_one xv6ma10,subplot,In which subplot are you installing your sensors?,false,
-barcode,cover_crop_node,Scan your cover crop node,false,
-geopoint,gps_cover_crop_node,What is the GPS location of your cover crop node?,false,
-barcode,bare_node,Scan your bare node,false,
-geopoint,gps_bare_node,What is the GPS location of your bare node?,false,
-date,date_install,What day did you install the sensors?,false,
-text,issues,Any issues to report about your sensors?,false,
+type,name,label,appearance,default,required,media::image,calculation,relevant
+start,start,,,,,,,
+end,end,,,,,,,
+begin_group,group_vm21f92,Water Sensor Installation,field-list,,,,,
+note,form_name,Form Name,,psa_water_sensor_install,false,,,
+note,form_version,Version,,v3,false,,,
+note,welcome,"This is the form to both install or re-install soil water sensors, nodes, and gateways on-farm. ",,,false,,,
+end_group,,,,,,,,
+note,sensorplacerep1,"If this is the initial installation, you will likely place decomp bags inside the field. See diagram.",,,false,Sensorplacerep1.jpg,,
+note,sensorplacerep2,"In the second rep, you will not have a surface sensor",,,false,Sensorplacerep2.jpg,,
+text,code,What is your Farm Code?,,,true,,,
+date,date_install,What day are you installing / re-installing the sensors?,,,TRUE,,,
+barcode,barcode_gateway,Scan the barcode on the inside of your Gateway,,,TRUE,,,
+select_multiple fail000,fail_scan_000,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_000}='alt_barcode_gateway'
+select_one xv7ma17,initial_or_reinstall,Is this the initial install on the farm or a re-installation,,,false,,,
+note,reinstall_note,"Even if you are just replacing one set of nodes, please fill out the form completely, scanning or re-scanning all equipment that is in the field",,,FALSE,,,${initial_or_reinstall}='reinstall'
+begin_group,group_uv9yg82,Nodes in Reps,field-list,,false,,,
+note,noteaboutreps,"If you are re-installing any nodes please fill out this form completely, scanning all nodes in all reps and treatments.",,,,,,
+barcode,cover_crop_node_rep1,Scan your cover crop node - REP 1,,,false,,,
+select_multiple fail001,fail_scan_001,Barcode didn't scan?,,,false,,,
+text,manual_type_cover_crop_node_rep1,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_001}='alt_cover_crop_node_rep1'
+geopoint,gps_cover_crop_node_rep1,GPS location of your cover crop node - REP 1,,,false,,,
+barcode,bare_node_rep1,Scan your bare node - REP 1,,,false,,,
+select_multiple fail002,fail_scan_002,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,Try again. If it fails multiple times you can manually type the barcode here. IMPORTANT: Double check and use correct cases and dashes.,,,false,,,${fail_scan_002}='alt_bare_node_rep1'
+geopoint,gps_bare_node_rep1,GPS location of your bare node - REP 1,,,false,,,
+text,issues_rep1,Any issues to report? - REP 1,,,false,,,
+note,note_no_rep2,"If you don't have a second rep, scroll to the bottom and submit with blanks here",,,false,,,
+barcode,cover_crop_node_rep2,Scan your cover crop node - REP 2,,,false,,,
+select_multiple fail003,fail_scan_003,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_003}='alt_cover_crop_node_rep2'
+geopoint,gps_cover_crop_node_rep2,GPS location of your cover crop node - REP 2,,,false,,,
+barcode,bare_node_rep2,Scan your bare node - REP 2,,,false,,,
+select_multiple fail004,fail_scan_004,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_004}='alt_bare_node_rep2'
+geopoint,gps_bare_node_rep2,GPS location of your bare node - REP 2,,,false,,,
+text,issues_rep2,Any issues to report? - REP 2,,,false,,,
+end_group,,,,,false,,,
+note,noteuninstall,"If you are re-installing sensors today, you must also fill an sensor uninstall form for the sensors you are removing",,,false,,,
