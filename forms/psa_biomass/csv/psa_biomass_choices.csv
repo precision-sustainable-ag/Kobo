@@ -1,7 +1,48 @@
 list_name,name,label
+123poiu,biomass_only,Biomass Only
+123poiu,bags,Full Protocol - Biomass and Decomp Bags
 my95g71,yes,Yes
 my95g71,no,No
 pj8me03,drilled,Drilled
 pj8me03,broadcast,Broadcast
 ev21s69,more_than_40_legume,More than 40% legume
 ev21s69,less_than_40_legume,Less than 40% legume
+567rtyu,grains,Grains
+567rtyu,legumes,Legumes
+567rtyu,brassicas,Brassicas
+fgh1234,tillering,Tillering
+fgh1234,stem_extenstion,Stem Extension
+fgh1234,heading_flowering,Heading and Flowering
+fgh1234,ripening,Ripening (grain forming from milk to kernel)
+50ty501,decay_winterkilled,Decay (winterkilled)
+50ty501,vegetative,Vegetative
+50ty501,flowering,Flowering
+50ty501,podfill,Podfill/ Mature
+wer2345,decay_winterkilled,Decay (winterkilled)
+wer2345,vegetative,Vegetative
+wer2345,flowering,Flowering
+wer2345,ripening,Ripening/ Mature
+fail000,failed_scan,Failed Scan
+fail001,failed_scan,Failed Scan
+fail002,failed_scan,Failed Scan
+fail003,failed_scan,Failed Scan
+fail004,failed_scan,Failed Scan
+fail005,failed_scan,Failed Scan
+fail006,failed_scan,Failed Scan
+fail007,failed_scan,Failed Scan
+fail008,failed_scan,Failed Scan
+fail009,failed_scan,Failed Scan
+fail010,failed_scan,Failed Scan
+fail011,failed_scan,Failed Scan
+fail012,failed_scan,Failed Scan
+fail013,failed_scan,Failed Scan
+fail014,failed_scan,Failed Scan
+fail015,failed_scan,Failed Scan
+fail016,failed_scan,Failed Scan
+fail017,failed_scan,Failed Scan
+fail018,failed_scan,Failed Scan
+fail019,failed_scan,Failed Scan
+fail020,failed_scan,Failed Scan
+fail021,failed_scan,Failed Scan
+fail022,failed_scan,Failed Scan
+fail023,failed_scan,Failed Scan
