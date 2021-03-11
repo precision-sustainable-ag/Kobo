@@ -1,0 +1,37 @@
+type,name,label,hint,default,required,calculation,,
+start,start,,,,,,,
+end,end,,,,,,,
+note,form_name,Form Name,,psa_water_sensor_uninstall,false,,,
+note,form_version,Version,,v2,false,,,
+note,welcome,"STOP. This is the form for UNINSTALLING soil water sensors, nodes and/ or gateways. This form is used to both REPLACE broken equipment and REMOVE at the end of the season.",,,false,,,
+text,code,What is your Farm Code?,,,true,,,
+date,date_uninstall,What is the day you are uninstalling the equipment?,,,true,,,
+barcode,gateway,Scan the barcode on the inside of your Gateway,,,TRUE,,,
+select_multiple fail000,fail_scan_000,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_000}='alt_barcode_gateway'
+text,issues_gateway,Any issues to report about the Gateway?,,,false,,,
+select_one xv7ma17,final_or_reinstall,Is this the final uninstall for the season or a re-installation?,,,false,,,
+note,reinstall_note,"Even if you are just replacing one set of nodes or a gateway, please fill out the form completely, scanning or re-scanning all equipment that is in the field",,,FALSE,,,${final_or_reinstall}='reinstall'
+begin_group,group_uv9yg82,Nodes in Reps,field-list,,false,,,
+note,noteaboutreps,"If you are re-installing any nodes please fill out this form completely, scanning all nodes in all reps and treatments.",,,,,,
+barcode,cover_crop_node_rep1,Scan your cover crop node - REP 1,,,false,,,
+select_multiple fail001,fail_scan_001,Barcode didn't scan?,,,false,,,
+text,manual_type_cover_crop_node_rep1,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_001}='alt_cover_crop_node_rep1'
+geopoint,gps_cover_crop_node_rep1,GPS location of your cover crop node - REP 1,,,false,,,
+barcode,bare_node_rep1,Scan your bare node - REP 1,,,false,,,
+select_multiple fail002,fail_scan_002,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,Try again. If it fails multiple times you can manually type the barcode here. IMPORTANT: Double check and use correct cases and dashes.,,,false,,,${fail_scan_002}='alt_bare_node_rep1'
+geopoint,gps_bare_node_rep1,GPS location of your bare node - REP 1,,,false,,,
+text,issues_rep1,Any issues to report? - REP 1,,,false,,,
+note,note_no_rep2,"If you don't have a second rep, scroll to the bottom and submit with blanks here",,,false,,,
+barcode,cover_crop_node_rep2,Scan your cover crop node - REP 2,,,false,,,
+select_multiple fail003,fail_scan_003,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_003}='alt_cover_crop_node_rep2'
+geopoint,gps_cover_crop_node_rep2,GPS location of your cover crop node - REP 2,,,false,,,
+barcode,bare_node_rep2,Scan your bare node - REP 2,,,false,,,
+select_multiple fail004,fail_scan_004,Barcode didn't scan?,,,false,,,
+text,manual_type_barcode_gateway,IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_004}='alt_bare_node_rep2'
+geopoint,gps_bare_node_rep2,GPS location of your bare node - REP 2,,,false,,,
+text,issues_rep2,Any issues to report? - REP 2,,,false,,,
+end_group,,,,,false,,,
+note,noteuninstall,"If you are re-installing sensors today, you must also fill an sensor uninstall form for the sensors you are removing",,,false,,,

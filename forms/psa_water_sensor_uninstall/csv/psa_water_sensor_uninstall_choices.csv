@@ -1,0 +1,10 @@
+list_name,name,label
+xv7ma17,final,Final uninstall for the season
+xv7ma17,re-install,Re-installation
+xv6ma10,rep_1,Rep 1
+xv6ma10,rep_2,Rep 2
+fail000,alt_barcode_gateway,Failed Gateway barcode scan
+fail001,alt_cover_crop_node_rep1,Failed CC Node barcode scan
+fail002,alt_bare_node_rep1,Failed Bare Node barcode scan
+fail003,alt_cover_crop_node_rep2,Failed CC Node barcode scan
+fail004,alt_bare_node_rep2,Failed Bare Node barcode scan
