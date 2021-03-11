@@ -1,20 +1,29 @@
 type,name,label,appearance,default,required,media::image,calculation,relevant
 start,start,,,,,,,
 end,end,,,,,,,
+username,username,,,,,,,
+today,today,,,,,,,
 begin_group,group_vm21f92,Water Sensor Installation,field-list,,,,,
 note,form_name,Form Name,,psa_water_sensor_install,false,,,
-note,form_version,Version,,v3,false,,,
+note,form_version,Version,,v4,false,,,
 note,welcome,"This is the form to both install or re-install soil water sensors, nodes, and gateways on-farm. ",,,false,,,
 end_group,,,,,,,,
 note,sensorplacerep1,"If this is the initial installation, you will likely place decomp bags inside the field. See diagram.",,,false,Sensorplacerep1.jpg,,
 note,sensorplacerep2,"In the second rep, you will not have a surface sensor",,,false,Sensorplacerep2.jpg,,
+begin_group,farm_info_group,,field-list,,,,,
 text,code,What is your Farm Code?,,,true,,,
+select_one xv7ma17,initial_or_reinstall,Is this the initial install on the farm or a re-installation,,,false,,,
+note,reinstall_note,"Even if you are just replacing one set of nodes, please fill out the form completely, scanning or re-scanning all equipment that is in the field",,,FALSE,,,${initial_or_reinstall}='re-install'
+text,crop,What is the crop?,,,FALSE,,,${initial_or_reinstall}='initial'
+date,crop_planting_date,What is the date the crop was planted?,,,FALSE,,,${initial_or_reinstall}='initial'
 date,date_install,What day are you installing / re-installing the sensors?,,,TRUE,,,
+end_group,,,,,,,,
 barcode,barcode_gateway,Scan the barcode on the inside of your Gateway,,,TRUE,,,
 select_multiple fail000,fail_scan_000,Barcode didn't scan?,,,false,,,
 text,manual_type_barcode_gateway,Manually type here. IMPORTANT: Double check correct numbers,,,false,,,${fail_scan_000}='alt_barcode_gateway'
-select_one xv7ma17,initial_or_reinstall,Is this the initial install on the farm or a re-installation,,,false,,,
-note,reinstall_note,"Even if you are just replacing one set of nodes, please fill out the form completely, scanning or re-scanning all equipment that is in the field",,,FALSE,,,${initial_or_reinstall}='reinstall'
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
 begin_group,group_uv9yg82,Nodes in Reps,field-list,,false,,,
 note,noteaboutreps,"If you are re-installing any nodes please fill out this form completely, scanning all nodes in all reps and treatments.",,,,,,
 barcode,cover_crop_node_rep1,Scan your cover crop node - REP 1,,,false,,,
