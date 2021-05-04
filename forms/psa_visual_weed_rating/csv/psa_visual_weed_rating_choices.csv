@@ -1,0 +1,60 @@
+list_name,name,label
+1234567,cotton,Cotton
+1234567,soybean,Soybean
+1234567,corn,Corn
+123456a,ve,VE
+123456a,v1,V1
+123456a,v2,V2
+123456a,v4,V4
+123456a,v6,V6
+123456a,v10,V10
+123456a,v12,V12
+123456a,v14,V14
+123456a,vt,VT
+123456a,r1,R1
+123456a,r2,R2
+123456a,r3,R3
+123456a,r4,R4
+123456a,r5,R5
+123456a,r6,R6
+123456b,ve,VE
+123456b,vc,VC
+123456b,v1,V1
+123456b,v2,V2
+123456b,v3,V3
+123456b,r1,R1
+123456b,r3,R3
+123456b,r6,R6
+123456b,r7,R7
+123456b,r8,R8
+123456c,vegetative_growth,Vegetative Growth
+123456c,pinhead_square,Pinhead Square
+123456c,matchhead_square,Match-head Square
+123456c,bloom,Bloom
+123456c,boll_set,Boll Set
+123456c,boll_fill,Boll Fill
+123456c,maturity,Maturity
+123456d,less_than_1_%,Less than 1%
+123456d,more_than_1_%,More than 1%
+123456e,broadleaf_0_Grassess_100,"Broadleaf: 0%
+          Grasses: 100%"
+123456e,broadleaf_10_Grassess_90,"Broadleaf: 10%
+          Grasses: 90%"
+123456e,braodleaf_20_Grassess_80,"Broadleaf: 20%
+          Grasses: 80%"
+123456e,broadleaf_30_Grassess_70,"Broadleaf: 30%
+          Grasses: 70%"
+123456e,broadleaf_40_Grassess_60,"Broadleaf: 40%
+          Grasses: 60%"
+123456e,broadleaf_50_Grassess_50,"Broadleaf: 50%
+          Grasses: 50%"
+123456e,broadleaf_60_Grassess_40,"Broadleaf: 60%
+          Grasses: 40%"
+123456e,broadleaf_70_Grassess_30,"Broadleaf: 70%
+          Grasses: 30%"
+123456e,broadleaf_80_Grassess_20,"Broadleaf: 80%
+          Grasses: 20%"
+123456e,broadleaf_90_Grassess_10,"Broadleaf: 90%
+          Grasses: 10%"
+123456e,broadleaf_100_Grassess_0,"Broadleaf: 100%
+          Grasses: 0%"
