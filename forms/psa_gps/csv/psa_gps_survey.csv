@@ -1,10 +1,14 @@
 type,name,label,hint,required,appearance,default,relevant,calculation,media::video,media::image
 start,start,,,,,,,,,
 end,end,,,,,,,,,
+username,username,,,,,,,,,
+today,today,,,,,,,,,
+begin_group,group_name,PSA GPS for On-Farm Treatments,,,field-list,,,,,
 note,form_name,Form Name,,,,psa_gps,,,,
-note,form_version,Version,,,,2.1,,,,
+note,form_version,Version,,,,v3,,,,
 note,info_gps_field,"First you will record GPS coordinates for the OUTER corners of each treatment, Cover and Bare, noted in black 'X's in the diagram. Note: it does NOT matter which corner you start in.",,,,,,,,gps_diagram.jpg
-note,info_center_gps_field,"Then you will record GPS coordinate of the center of the biomass sampling area (in blue), noted by the yellow X's in the diagram",,,,,,,,gps_diagram.jpg
+note,info_center_gps_field,"Then you will record GPS coordinate of the center of the biomass sampling area (in blue), noted by the yellow X's in the diagram",,,,,,,,
+end_group,,,,,,,,,,
 text,code,What is the 3 letter site Code?,These 3 letter codes were selected for you when you enrolled a farm,true,,,,,,
 begin_group,group_ct2kn52,Rep1: GPS corners of Cover Crop Area,(you can start in any corner),FALSE,field-list,,,,,
 geopoint,gps_cc_rep1_corner_001,GPS Cover Crop corner 1,,false,,,,,,
@@ -34,5 +38,5 @@ geopoint,gps_bare_rep2_corner_003,GPS Bare corner 3,,false,,,,,,
 geopoint,gps_bare_rep2_corner_004,GPS Bare corner 4,,false,,,,,,
 geopoint,gps_bare_rep2_center,GPS Bare center,,FALSE,,,,,,
 end_group,,,,,,,,,,
-note,end,"This is the end of the GPS form. You will collect GPS points when you install soil moisture sensors, the the 'psa_water_sensor_install' form",,FALSE,,,,,,
+note,end,"This is the end of the GPS form. You will collect GPS points when you install soil moisture sensors, the the 'psa  water sensor install' form",,FALSE,,,,,,
 text,comments,"If you have any issues to report, or comments include them here",,FALSE,,,,,,

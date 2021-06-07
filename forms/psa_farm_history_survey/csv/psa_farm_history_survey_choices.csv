@@ -72,9 +72,10 @@ ji9wb83,drilled,Drilled
 ji9wb83,broadcast,Broadcast
 ji9wb83,aerial_seeded,Aerial Seeded
 ji9wb83,other,Other
+xs4gb03,price_per_acre,I want to answer in $/ acre
 xs4gb03,price_per_lb,"I want to answer in $/ lb of seed, and I know my approximate seed rate per acre."
 xs4gb03,price_per_truck,"I want to answer in $/ truck load, and I know how many truck loads went on that field, and the field size in acres."
-xs4gb03,price_per_acre,"I want to answer in total $ that I spend on cover crop seed on my farm, and how many total cover crop acres on my farm."
+xs4gb03,price_per_farm_acre,"I want to answer in total $ that I spend on cover crop seed on my farm, and how many total cover crop acres on my farm."
 xs4gb03,price_other,Other
 cl4gf13,herbicide,Herbicide
 cl4gf13,mechanical,Mechanical
