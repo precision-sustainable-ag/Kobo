@@ -71,13 +71,13 @@ sv07f73,nfert_rate_plus_manure,the above rate plus manure
 ji9wb83,drilled,Drilled
 ji9wb83,broadcast,Broadcast
 ji9wb83,aerial_seeded,Aerial Seeded
-ji9wb83,other,Other
+ji9wb83,natural_seeded,Natural Seeded
+xs4gb03,price_per_acre,I want to answer in $/ acre
 xs4gb03,price_per_lb,"I want to answer in $/ lb of seed, and I know my approximate seed rate per acre."
-xs4gb03,price_per_truck,"I want to answer in $/ truck load, and I know how many truck loads went on that field, and the field size in acres."
-xs4gb03,price_per_acre,"I want to answer in total $ that I spend on cover crop seed on my farm, and how many total cover crop acres on my farm."
+xs4gb03,price_per_farm_acre,"I want to answer in total $ that I spend on cover crop seed on my farm, and how many total cover crop acres on my farm."
 xs4gb03,price_other,Other
-cl4gf13,herbicide,Herbicide
-cl4gf13,mechanical,Mechanical
+cl4gf13,herbicide,Herbicide 
+cl4gf13,mechanical,Mechanical Only (no herbcide)
 cl4gf13,combination_termination,Combination of Herbicide and Mechanical (ie: roller crimper)
 bd5he26,2_4_d,2 4-D
 bd5he26,atrazine,Atrazine
@@ -94,7 +94,10 @@ bd5he26,pendimethalin,Pendimethalin/Prowl
 bd5he26,rimsulfuron,Rimsulfuron/LeadOff
 bd5he26,trifluralin,Trifluralin/Treflan
 bd5he26,pyroxasulfone,Pyroxasulfone/ Zidua
+bd5he26,valor,Valor
 bd5he26,other,Other
 bg45t67,corn,Corn
 bg45t67,soybean,Soybean
 bg45t67,cotton,Cotton
+lkjh123,plant_green,Plant Green
+lkjh123,no,No
