@@ -108,13 +108,14 @@ image,rep2_cover_image,Rep 2 Cover Crop Image,false,,,,,${rep2_growthstage_diff}
 image,rep2_bare_image,Rep 2 Bare Image,false,,,,,${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
 text,comments_image,Do you have any comments about the seedling photos or other comments?,false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
 end_group,,,,,,,,
-begin_group,group_lh6ba50,Root and Shoot Dry Weights,false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
-decimal,rep1_cover_root_wt,Rep 1 Cover Crop Root Dry Weight (g),false,,,,,
-decimal,rep1_cover_shoot_wt,Rep 1 Cover Crop Shoot Dry Weight (g),false,,,,,
-decimal,rep1_bare_root_wt,Rep 1 Bare Root Dry Weight (g),false,,,,,
-decimal,rep1_bare_shoot_wt,Rep 1 Bare Shoot Dry Weight (g),false,,,,,
-decimal,rep2_cover_root_wt,Rep 2 Cover Crop Root Dry Weight (g),false,,,,,
-decimal,rep2_cover_shoot_wt,Rep 2 Cover Crop Shoot Dry Weight (g),false,,,,,
-decimal,rep2_bare_root_wt,Rep 2 Bare Root Dry Weight (g),false,,,,,
-decimal,rep2_bare_shoot_wt,Rep 2 Bare Shoot Dry Weight (g),false,,,,,
+begin_group,group_lh6ba50,Root and Shoot Dry Weights,false,,,,,
+note,weightnote,"Places to take dry weights will appear in this form here if any of your reps required sampling. Fill in any that are applicable and leave others blank.  If you were not prompted to dig plants, you can finish and submit the form.",false,,,,,
+decimal,rep1_cover_root_wt,Rep 1 Cover Crop Root Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep1_cover_shoot_wt,Rep 1 Cover Crop Shoot Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep1_bare_root_wt,Rep 1 Bare Root Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep1_bare_shoot_wt,Rep 1 Bare Shoot Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep2_cover_root_wt,Rep 2 Cover Crop Root Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep2_cover_shoot_wt,Rep 2 Cover Crop Shoot Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep2_bare_root_wt,Rep 2 Bare Root Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
+decimal,rep2_bare_shoot_wt,Rep 2 Bare Shoot Dry Weight (g),false,,,,,${rep1_growthstage_diff} > .1 or ${rep1_count_diff} > .1 or ${rep2_growthstage_diff} > .1 or ${rep2_count_diff} > .1
 end_group,,,,,,,,
