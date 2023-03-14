@@ -1,6 +1,7 @@
 list_name,name,label
 xv7ma17,initial,Initial Set Up
 xv7ma17,re-install,Re-installation
+xv7ma17,winter,Winter Install
 xv6ma10,rep_1,Rep 1
 xv6ma10,rep_2,Rep 2
 fail000,alt_barcode_gateway,Failed Gateway barcode scan
